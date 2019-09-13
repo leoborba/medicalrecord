@@ -1,6 +1,6 @@
 # Desafio Planilha Médica
 
-Projeto Desafio Planilha Médica tem como objetivo uma implementação Python+Django+Heroku 
+Projeto Desafio Planilha Médica tem como objetivo uma implementação Python+Django+mongoDB+Heroku 
 
 **Publicação online do projeto**
 
@@ -17,6 +17,10 @@ https://medicalform.herokuapp.com/medicalRecord/
 
 Foi utilizado para testes o MongoDB através do MongoDB Atlas, também a fins de estudo pois tinha pouco conhecimento desta base de dados NoSQL. 
 Toda manipulação dos dados foi realizada através do Django Models, com isto uma simples configuração no arquivo settings.py é possível utilizar praticamente qualquer base de dados.
+
+**Testes unitários**
+
+Foram criados testes unitários básicos para ilustrar o cuidado com a manutenção do formato do model do sitema e outro para garantir a atualização das informações do sistema. 
 
 **API REST**
 
