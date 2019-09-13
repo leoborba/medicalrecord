@@ -25,7 +25,7 @@ SECRET_KEY = 'p69ki+q9c_ktn6-^brx(m90i824)frku9&yo(g%$dgrcu=usq0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-env.mhgahrjqka.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'form_challenge',
     'medicalRecord',
     'rest_framework'
 ]
@@ -57,8 +56,7 @@ ROOT_URLCONF = 'formChallenge.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["form_challenge/templates/",
-                 "medicalRecord/templates/"],
+        'DIRS': ["medicalRecord/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,7 +130,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-# Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())

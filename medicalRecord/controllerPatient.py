@@ -4,7 +4,7 @@ from medicalRecord.models import PatientForm
 
 
 def add_patient(name,birth,collection,doctor,form_id):
-    #try:
+    try:
         patient = PatientForm()
         result = update_patient(patient,name,birth,collection,None,doctor,form_id)
 
@@ -12,12 +12,12 @@ def add_patient(name,birth,collection,doctor,form_id):
             return True
         else:
             return False
-    #except:
-    #    return False
+    except:
+        return False
 
 
 def update_patient(patient_instance,name,birth,collection,delivery,doctor,form_id):
-   # try:
+    try:
         if patient_instance:
             patient_instance.name = name
             patient_instance.birth = birth
@@ -34,6 +34,6 @@ def update_patient(patient_instance,name,birth,collection,delivery,doctor,form_i
             return True
         else:
             return False
-    #except Exception as e:
-    #    s = str(e)
-    #    return False
+    except Exception as e:
+        s = str(e)
+        return False
