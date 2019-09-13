@@ -22,6 +22,7 @@ def update_patient(patient_instance,name,birth,collection,delivery,doctor,form_i
             patient_instance.name = name
             patient_instance.birth = birth
             patient_instance.collection = collection
+            patient_instance.delivery = collection
 
             if delivery is not None and delivery != '' :
                 patient_instance.delivery = delivery
